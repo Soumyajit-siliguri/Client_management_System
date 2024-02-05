@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Management System</title>
+    <link rel="stylesheet" href="cms.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sinha's Client Management System</h1>
+    </header>
+
+    <main>
+        <div class="form-container" id="createClient">
+            <form id="createClientForm">
+                <h2>Create a Client</h2>
+                <!-- ... (same as before) ... -->
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <br>
+                <label for="address">Address:</label>
+                <br>
+                <input type="text" id="address" name="address" required>
+                <br>
+                <br>
+                
+                <button type="reset" id="createClientReset">Reset</button>
+                <button type="submit" id ="CreateClientSubmit">Register</button>
+
+            </form>
+        </div>
+
+
+        <div class="form-container" id="displayClientsContainer">
+            <form>
+                <h2>Display Clients</h2>
+                <!-- ... (same as before) ... -->
+                <div id="displayClients"></div>
+                <button type="reset" id="DisplayClientReset">Reset</button>
+                <button type="submit" id="DisplayClientBTN">Confirm Selected</button>
+            </form>
+        </div>
+
+        <div class="form-container" id = "createMeeting">
+            <form id="createMeetingForm">
+                <h2>Create a Meeting</h2>
+                <!-- ... (same as before) ... -->
+                <label for="meetingTopic">Meeting Topic:</label><br>
+                <input type="text" id="meetingTopic" name="meetingTopic" required>
+                
+                <br><br>
+                <label for="SelectedClients">Selected Clients:</label><br>
+                <div id="SelectedClients"></div>
+
+                <br><br>
+                <label for="dateTime">Date & Time:</label>
+                <br><input type="datetime-local" id="dateTime" name="dateTime" required>
+
+                <br><br>
+                <button type="reset" id="createMeetingReset">Reset</button>
+                <button type="submit" id="CreateMeetingBTN">Create Meeting</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form id="schedule-form">
+                <h2>Schedule</h2>
+                <!-- ... (same as before) ... -->
+                
+
+                <button type="button" id="sortBTN" onclick="sortScheduleByDate()">Sort by Date</button>
+                <br>
+                <br>
+                <!-- Display schedules dynamically based on the selected date -->
+                <!-- You can use JavaScript to update this section -->
+                <div id="scheduleOutput"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 &copy; 2024 by Henna Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="cms.js"></script>
+</body>
+</html>
